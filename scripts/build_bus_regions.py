@@ -264,7 +264,7 @@ if __name__ == "__main__":
         # drop isolated buses
         onshore_regions = onshore_regions[~onshore_regions.name.isin(isolated_buses)]
         # drop duplicates based on shape_id
-        onshore_regions = onshore_regions.drop_duplicates('shape_id')
+        onshore_regions = onshore_regions.drop_duplicates("shape_id")
 
         if len(onshore_regions) < len(gadm_country):
             logger.error(
